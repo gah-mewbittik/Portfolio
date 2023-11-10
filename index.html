@@ -3,13 +3,16 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Portfolio</title>
-        <link rel="stylesheet" href="styles.css">
+        <title>Andrew Biron Portfolio</title>
+        <link rel="stylesheet" href="./assets/css/styles.css">
       </head>
     <body>
+        <!--Header starts-->
         <header class="header">
             <div class="logo">
-                <img id="logo-img" src="./assets/images/personalLogo_v5.png"/>
+                <a href="#about-me">
+                 <img id="logo-img" alt="Personal Logo" src="./assets/images/personalLogo_v5.png"/>
+                </a>
             </div>
             <nav>
                 <ul>
@@ -20,24 +23,79 @@
                 </ul>
             </nav>
         </header>
+         <!--Header ends-->
         <!-- Main Starts -->
-        <main>
+        <main class="main">
+            <!--About Me Section starts-->
             <section id="#about-me">
                 <h2 class="section-headers">ABOUT ME</h2>
-                <p></p>
+                    <!--tooltip span-->
+                <span data-descr="Thanks for checking me out! &#128517 &#128514">
+                    <!--Profile pic-->
+                <img id="profile-pic" alt="profile picture" src="./assets/images/profile.jpg" />
+                </span>
+                <p class="tighten-width">Hello, I'm <strong>Andrew Biron</strong>, a Multi-Media Designer and Developer. I love taking an idea and bringing it to life.  I enjoy making things simple and automating daily tasks. I try to keep up with coding best practices, and looking for new things to learn.  
+                    I graduated from Carleton University with a Bachelor of Information Technology in Interactive Multimedia and Design.
+                    When I do peel away from my desk, I'll most likely be caught watching/playing sports, or finding ways to be in nature.</p>
             </section>
+             <!--About Me Section ends-->
+            <!--Work Section starts-->
             <section id="#work">
                 <h2 class="section-headers">WORK</h2>
-                <p></p>
+                <a href="#">
+                    <div class="project-tile">
+                        <img src="./assets/images/Madi’sDresses 2.png" alt="madi's dresses" />
+                        <div class="pic-container">
+                            <p>Madi's Dresses</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="project-tile">
+                        <img id="css-doc-img" src="./assets/images/css_doc.png" alt="CSS document" />
+                        <div class="pic-container">
+                            <p>CSS Documentation</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="project-tile">
+                        <img id="sports-background" src="./assets/images/sportsBackground.jpg" alt="sports balls" />
+                        <div class="pic-container">
+                            <p>Survey Form</p>
+                        </div>
+                    </div>
+                </a>
             </section>
-            <section id="#contact-me">
+             <!--Work Section ends-->
+            <!--Contact Me Section-->
+            <section id="#contact-section">
                 <h2 class="section-headers">CONTACT ME</h2>
-                <p></p>
+                <div class="contact-section-header">
+                    <h3>Let's create together...</h3>
+                    <p>We'll learn our coffee ways!</p>
+                    </div>
+                <div class="contact-links">
+                    <a href="https://twitter.com" target="_blank" class="btn contact-details">
+                      <i class="fas fa-twitter"></i>
+                      Twitter
+                    </a>
+                    <a href="mailto:example@example.com" target="_blank"class="btn contact-details"><i class="fas fa-at"></i>
+                      Send a Email
+                    </a>
+                  <a id="profile-link" href="https://github.com/gah-mewbittik" target="_blank" class="btn contact-details">
+                    <i class="fas fa-mobile-alt"></i>
+                      GitHub
+                    </a>
+                  </div>
             </section>
+             <!--Contact Me Section ends-->
+            <!--Resume Section starts-->
             <section id="#resume">
                 <h2 class="section-headers">RESUME</h2>
                 <p></p>
             </section>
+            <!--Resume Section ends-->
         </main>
         <!-- Main Ends -->
        <!-- Footer Starts -->

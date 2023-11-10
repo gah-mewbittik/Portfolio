@@ -5,29 +5,235 @@
 body{
   font-family: Poppins, sans-serif;
   line-height: 1.5;
+  display:flex;
 }
 
-.header nav {
-  padding-top: 15px;
-  margin-right: 20px;
-  float: right;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 20px;
+.header{
+  Position: fixed;
+  top: 0;
+  min-height: 50px;
+  padding: 0 20px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  padding: 10px 16px;
+  z-index: 1;
+} 
+@media(max-width: 600px){
+  header{
+    flex-wrap: wrap;
+    
+  }
 }
-/* removing the bullet points in the unordered list*/ 
-.header nav ul {
+
+.logo{
+  width: 55vw;
+  padding: 10px;
+}
+
+@media(max-width: 650px){
+  .logo{
+    margin-top: 15px;
+    width: 100%;
+    position: relative;
+  }
+}
+
+#header-img{
+  max-width: 100%;
+  display: flex;
+  
+}
+
+/* removing the bullet points and underline */ 
+li{
   list-style-type: none;
 }
-
-.header nav ul li {
-  display: inline-block;
-  margin-left: 25px;
+a{
+ text-decoration: none;
+ color: darkgray;
+}
+/*** Navigation start ***/
+nav{
+  font-weight: 400; 
+  display: flex;
+  flex-direction: flex-end;
+  margin-right: 50px;
 }
 
-a {
-  color: #ffffff;
-  text-decoration: none;
+@media (max-width: 650px){
+  nav{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: flex-end;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+}
+nav > ul{
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  
+}
+
+@media(max-width: 650px){
+  nav > ul{
+    flex-direction: column;
+  } 
+}
+
+nav a:hover{
+  color:orangered;
+}
+/*** Navigation ends ***/
+
+
+.main{
+  display: flex;
+  flex-direction: column;
+  margin-top: 150px;
+  align-items: center;
+}
+
+.section-headers{
+  display:flex;
+  justify-content: center;
+}
+
+p{
+  text-align: center;
 }
 
 
+/* #about-me{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  width: 100%;
+  height: 100vh; 
+}  */
+
+#profile-pic{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:20px;
+  border: 5px solid #ddd;
+  border-radius: 50% 20px 50% 20px;
+  padding: 5px;
+  box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+}
+
+span[data-descr]{
+  position: relative;
+  cursor:grab;
+} 
+span[data-descr]:hover::after{     
+  content: attr(data-descr);
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  transform: translateX(160%);
+  min-width: 300px;
+  border: 3px solid #ddd;
+  padding: 12px;
+  background-color:rgb(244, 244, 244);
+  font-size: 18px;
+  border-radius: 20px;
+  box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+  /* z-index:1; */
+  justify-content: center;
+}
+
+/*** Work Section start ***/
+
+.project-tile{
+  display:inline-block;
+  background-color: white;
+  border: 5px solid #ddd;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  margin-right:25px;
+  border-radius: 20px;
+  width:20%;
+}
+
+.pic-container{
+  text-align:center;
+  padding: 10px 20px 10px 10px; 
+  width:100%;
+} 
+
+#css-doc-img{
+  width:100%;
+  border-radius: 20px 20px 0 0;
+}
+#sports-background{
+  width:100%;
+  border-radius: 20px 20px 0 0;
+  
+}
+/*** Work Section ends ***/
+
+/*** Contact Section starts ***/
+.contact-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 50vw;
+  padding: 0 2rem;
+}
+/*header "Let's create together"*/
+.contact-section-header > h3{
+  text-align: center;
+  font-size: 40px;
+  width:100%
+}
+@media(max-width: 28.75em){
+  .contact-section-header > h3{
+    font-size: 4rem;
+  }
+}
+/*coffee ways line text styling*/
+.contact-section-header > p{
+  font-style: italic;
+  font-size: 25px;
+}
+
+/*setting positioning of contact links*/
+.contact-links{
+  display:flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+/*contact text links and ease motion*/
+.contact-details{
+  font-size: 2.0rem;
+  /*text-shadow: 2px -12px 1px #1f1f1f;*/
+  transition: transform 0.3s ease-out;
+  padding: 20px;
+}
+/*contact hovering turns orangered, adds a text-shadow, and directs a moves down*/
+.contact-details:hover{
+  transform: translateY(10px);
+  color: orangered;
+  text-shadow: 13px 25px 5px #1f1f1f;
+}
+/*** Contact Section ends ***/
 
