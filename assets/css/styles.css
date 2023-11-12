@@ -192,6 +192,19 @@ span[data-descr]:hover::after{
   width: 100%;
   border-radius: 20px 20px 0 0;
 }
+#markdown-preview{
+  width:100%;
+  border-radius: 20px 20px 0 0;
+}
+#calculator{
+  width:100%;
+  border-radius: 20px 20px 0 0;;
+}
+
+#drum-machine{
+  width:100%;
+  border-radius: 20px 20px 0 0;
+}
 
 /*** Work Section ends ***/
 
