@@ -1,4 +1,7 @@
-/*initial css file*/
+:root{
+  --mainHover: orangered; 
+  --borderCol: #ddd;
+}
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap'); 
 
@@ -7,7 +10,7 @@ body{
   line-height: 1.5;
   display:flex;
 }
-
+/*header setup*/
 .header{
   Position: fixed;
   top: 0;
@@ -90,7 +93,7 @@ nav > ul{
 }
 
 nav a:hover{
-  color:orangered;
+  color:var(--mainHover);
 }
 /*** Navigation ends ***/
 
@@ -105,34 +108,25 @@ nav a:hover{
 .section-headers{
   display:flex;
   justify-content: center;
+  margin-top:150px;
 }
 
 p{
   text-align: center;
 }
 
-
-/* #about-me{
-  display: flex;
-  flex-direction: column;
-  justify-content: center; 
-  align-items: center; 
-  width: 100%;
-  height: 100vh; 
-}  */
-
 #profile-pic{
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-bottom:20px;
-  border: 5px solid #ddd;
+  border: 5px solid var(--borderCol);
   border-radius: 50% 20px 50% 20px;
   padding: 5px;
   box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   
 }
-
+/*Tooltip for profile pic*/
 span[data-descr]{
   position: relative;
   cursor:grab;
@@ -144,7 +138,7 @@ span[data-descr]:hover::after{
   bottom: 25px;
   transform: translateX(190%);
   min-width: 300px;
-  border: 3px solid #ddd;
+  border: 3px solid var(--borderCol);
   padding: 12px;
   background-color:rgb(244, 244, 244);
   font-size: 18px;
@@ -160,50 +154,35 @@ span[data-descr]:hover::after{
 .project-tile{
   display:inline-block;
   background-color: white;
-  border: 5px solid #ddd;
+  border: 5px solid var(--borderCol);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 25px;
   margin-right:25px;
   border-radius: 20px;
   width:20%;
 }
-
+/*tile header container*/
 .pic-container{
   text-align:center;
   padding: 10px 20px 10px 10px; 
   width:100%;
 } 
 
-#madi-img{
-  width:100%;
-
-}
-
-#css-doc-img{
+/*tile image adjustment*/
+.img-adj{
   width:100%;
   border-radius: 20px 20px 0 0;
-}
-#sports-background{
-  width:100%;
-  border-radius: 20px 20px 0 0;
-  
-}
-#quote-gen{
-  width: 100%;
-  border-radius: 20px 20px 0 0;
-}
-#markdown-preview{
-  width:100%;
-  border-radius: 20px 20px 0 0;
-}
-#calculator{
-  width:100%;
-  border-radius: 20px 20px 0 0;;
 }
 
-#drum-machine{
-  width:100%;
-  border-radius: 20px 20px 0 0;
+/*project tile text*/
+.title-tile{
+  color:blue;
+}
+/*project tile hover attr.*/
+.project-tile:hover{
+  background-color: var(--mainHover);
+  box-shadow: 0 4px 8px 0 rgba(255, 69, 0, 0.2), 0 6px 20px 0 rgba(255, 69, 0, 0.19);
+  border: 5px solid orange;
 }
 
 /*** Work Section ends ***/
@@ -256,7 +235,7 @@ span[data-descr]:hover::after{
 /*contact hovering turns orangered, adds a text-shadow, and directs a moves down*/
 .contact-details:hover{
   transform: translateY(-10px);
-  color: orangered;
+  color: var(--mainHover);
   text-shadow: 13px 25px 5px #1f1f1f;
   
 } 
