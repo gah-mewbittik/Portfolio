@@ -133,6 +133,7 @@ span[data-descr]{
   position: relative;
   cursor:grab;
 } 
+/*Tooltip hover*/
 span[data-descr]:hover::after{     
   content: attr(data-descr);
   position: absolute;
@@ -252,6 +253,66 @@ span[data-descr]:hover::after{
   
 } 
 /*** Contact Section ends ***/
+
+/*** Resume Sections starts ***/
+.resume-container {
+margin: 0 auto; /* for centering, feel free to use flexbox or some other method*/
+box-sizing: border-box;
+padding: 0.5in; /* controls margins */
+width: 8.5in;
+height: 11in;
+background-color: white;
+box-shadow: 0 3px 8px -3px rgba(0, 0, 0, 0.7);
+}
+
+.multicolumn {
+display: grid;
+grid-template-columns: 1fr 3fr;
+gap: 1rem;
+}
+
+.resume-contact{
+  text-align: start;
+}
+.info-card{
+  text-align: end;
+  margin-right: 65px;
+  
+}
+.resume-titles{
+  text-align:start;
+  font-size: 20px;
+}
+
+.download-link{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  color:blue;
+}
+.download-link:hover{
+  color:var(--mainHover);
+}
+
+/*print set up*/
+@media print {
+  body {
+    margin: 0;
+  }
+
+  .resume-container {
+    width: 100%;
+    box-shadow: none;
+  }
+  html {
+    height: 11in;
+    width: 8.5in;
+    overflow: hidden;
+  }
+}
+
+
+/*** Resume Section ends ***/
 
 /*** Footer starts ***/
 footer{
