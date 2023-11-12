@@ -23,7 +23,7 @@ body{
   display: flex;
   padding: 10px 16px;
   z-index: 1;
-  height: 60px;
+  height:100px;
 } 
 @media(max-width: 600px){
   header{
@@ -98,12 +98,13 @@ nav a:hover{
 }
 /*** Navigation ends ***/
 
-
+/*** Main section ***/
 .main{
   display: flex;
   flex-direction: column;
   margin-top: 150px;
   align-items: center;
+ 
 }
 
 .section-headers{
@@ -159,7 +160,7 @@ span[data-descr]:hover::after{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 25px;
   margin-right:25px;
-  border-radius: 20px;
+  border-radius: 25px;
   width:20%;
   height: 300px;
   overflow: hidden;
@@ -175,19 +176,26 @@ span[data-descr]:hover::after{
 .img-adj{
   width:100%;
   border-radius: 20px 20px 0 0;
+  height: 50%;
 }
 
 /*project tile text*/
 .title-tile{
   color:blue;
+  font-size: 20px;
+  
 }
 /*project tile hover attr.*/
 .project-tile:hover{
   background-color: var(--mainHover);
   box-shadow: 0 4px 8px 0 rgba(255, 69, 0, 0.2), 0 6px 20px 0 rgba(255, 69, 0, 0.19);
   border: 5px solid orange;
+  
 }
 
+#resume{
+  margin-bottom: 100px;
+}
 /*** Work Section ends ***/
 
 /*** Contact Section starts ***/
@@ -235,6 +243,7 @@ span[data-descr]:hover::after{
   transition: transform 0.3s ease-out;
   padding: 20px;
 }
+
 /*contact hovering turns orangered, adds a text-shadow, and directs a moves down*/
 .contact-details:hover{
   transform: translateY(-10px);
@@ -244,3 +253,17 @@ span[data-descr]:hover::after{
 } 
 /*** Contact Section ends ***/
 
+/*** Footer starts ***/
+footer{
+  margin-top: 50px;
+  padding: 0px;
+  align-items: flex-end;
+  background-color: #d3d3d3;
+  display:flex;
+  width:100%;
+  position: fixed;
+  bottom: 0; 
+  justify-content: center;
+  opacity: 50%;
+}
+/*** Footer ends ***/
