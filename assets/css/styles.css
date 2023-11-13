@@ -137,7 +137,7 @@ span[data-descr]{
 span[data-descr]:hover::after{     
   content: attr(data-descr);
   position: absolute;
-  left: 50%;
+  /* left: 50%; */
   bottom: 25px;
   transform: translateX(190%);
   min-width: 300px;
@@ -273,7 +273,10 @@ gap: 1rem;
 
 .resume-contact{
   text-align: start;
+  width:100%
+  
 }
+
 .info-card{
   text-align: end;
   margin-right: 65px;
