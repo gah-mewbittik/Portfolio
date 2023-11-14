@@ -191,7 +191,7 @@ span[data-descr]:hover::after{
   background-color: var(--mainHover);
   box-shadow: 0 4px 8px 0 rgba(255, 69, 0, 0.2), 0 6px 20px 0 rgba(255, 69, 0, 0.19);
   border: 5px solid orange;
-  
+  transform: scale(1.10);
 }
 
 #resume{
