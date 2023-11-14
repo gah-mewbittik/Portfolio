@@ -9,13 +9,13 @@ body{
   font-family: Poppins, sans-serif;
   line-height: 1.5;
   display:flex;
+  width: 100%;
 }
 /*header setup*/
 .header{
-  Position: fixed;
+  position: fixed;
   top: 0;
   min-height: 50px;
-  padding: 0 20px;
   justify-content: space-around;
   align-items: center;
   background-color: white;
@@ -25,35 +25,15 @@ body{
   z-index: 1;
   height:100px;
 } 
-@media(max-width: 600px){
-  header{
-    flex-wrap: wrap;
-    
-  }
-}
 
 .logo{
-  width: 55vw;
+  width: 55%;
   padding: 10px;
-}
-
-@media(max-width: 650px){
-  .logo{
-    margin-top: 15px;
-    width: 100%;
-    position: relative;
-  }
-}
-
-#header-img{
-  max-width: 100%;
-  display: flex;
-  
 }
 
 /* removing the bullet points and underline */ 
 li{
-  list-style-type: none;
+  list-style: none;
 }
 a{
  text-decoration: none;
@@ -63,21 +43,11 @@ a{
 nav{
   font-weight: 400; 
   display: flex;
-  flex-direction: flex-end;
+  flex-direction: row;
   margin-right: 65px;
 }
 
-@media (max-width: 650px){
-  nav{
-    margin-top: 10px;
-    width: 100%;
-    display: flex;
-    flex-direction: flex-end;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-  }
-}
+
 nav > ul{
   width: 35vw;
   display: flex;
@@ -85,12 +55,6 @@ nav > ul{
   justify-content: space-around;
   list-style: none;
   
-}
-
-@media(max-width: 650px){
-  nav > ul{
-    flex-direction: column;
-  } 
 }
 
 nav a:hover{
@@ -121,7 +85,7 @@ p{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom:20px;
+  margin-bottom:30px;
   border: 5px solid var(--borderCol);
   border-radius: 50% 20px 50% 20px;
   padding: 5px;
@@ -137,7 +101,8 @@ span[data-descr]{
 span[data-descr]:hover::after{     
   content: attr(data-descr);
   position: absolute;
-  /* left: 50%; */
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 25px;
   transform: translateX(190%);
   min-width: 300px;
@@ -152,7 +117,16 @@ span[data-descr]:hover::after{
 }
 
 /*** Work Section start ***/
-
+#work{
+  display:block;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  margin-left: 11%;
+}
+#work-link{
+  margin-left:-10%;
+}
 /*Project tile template for projects*/
 .project-tile{
   display:inline-block;
@@ -216,11 +190,7 @@ span[data-descr]:hover::after{
   font-size: 40px;
   width:100%
 }
-@media(max-width: 28.75em){
-  .contact-section-header > h3{
-    font-size: 4rem;
-  }
-}
+
 /*coffee ways line text styling*/
 .contact-section-header > p{
   font-style: italic;
@@ -256,7 +226,7 @@ span[data-descr]:hover::after{
 
 /*** Resume Sections starts ***/
 .resume-container {
-margin: 0 auto; /* for centering, feel free to use flexbox or some other method*/
+margin: 0 auto; 
 box-sizing: border-box;
 padding: 0.5in; /* controls margins */
 width: 8.5in;
@@ -292,6 +262,7 @@ gap: 1rem;
   justify-content: center;
   margin-top: 20px;
   color:blue;
+  font-size: 18px;
 }
 .download-link:hover{
   color:var(--mainHover);
@@ -331,3 +302,133 @@ footer{
   opacity: 50%;
 }
 /*** Footer ends ***/
+
+/*** Making Responsive Site ***/
+/* Responsive: For tablets: */
+@media screen and (max-width:810px) {
+  body{
+   width:100%;
+   display: flex;
+  }
+  
+  header{
+    position: fixed;
+    width:100%;
+  }
+  main{
+    width: 80%;
+    margin-left:10%;
+  }
+  .logo{
+   display: flex;
+   flex-direction: column;
+    
+  }
+  nav{
+    margin-top: 15px;
+    width: 100%;
+    flex-direction: column;
+    
+   
+  }
+  nav ul li{
+    margin-right: 10px;
+    font-size: 12px;;
+  }
+  .section-headers{
+    width:100%;
+    margin-top: 250px;
+  }
+  span[data-descr]:hover::after{
+    left: 50%;
+    transform:translateX(50%);
+  }
+  p{
+    width:100%;
+    text-align: center;
+}
+.project-tile{
+  width:25%;
+  height: 150px;
+  
+} 
+.title-tile{
+  font-size: 14px;
+}
+.resume-container{
+  scale:0.75;
+  margin-bottom:5px;
+  margin-top: -200px;
+}
+.download-link{
+  margin-top: 5px;
+  margin-top:-200px;
+}
+
+}
+/*Responsive: For mobile */
+@media screen and (max-width:500px) {
+  body{
+    width:100%;
+    display: flex;
+   }
+   main{
+     margin-left:10%;
+     width:80%;
+   }
+   .header{
+     position: fixed;
+     width:100%;
+     display:flex;
+     flex-direction: column;
+     height:225px;
+   }
+   
+   .logo{
+    margin-top: 40px;
+    width:100%;
+    text-align:center; 
+    margin-right: 15%;
+    scale:0.65; 
+   }
+   nav{
+    display: flex;
+    flex-direction: column;
+    margin-right:25%;
+    width:100%;
+   }
+   nav ul{
+    width: 100%;
+   }
+   nav ul li{
+     margin-right: 15px;
+     font-size: 12px;
+     
+   }
+   .section-headers{
+     width:100%;
+   }
+   span[data-descr]:hover::after{
+     left: 50%;
+     transform:translateX(15%);
+   }
+   p{
+     width:100%;
+     text-align: center;
+ }
+ .project-tile{
+   width:100%;
+   height: 250px;
+   
+ }
+ .title-tile{
+   font-size: 20px;
+ }
+ .resume-container{
+   scale:0.50;
+   margin-bottom:5px;
+ }
+ .download-link{
+   font-size: 30px;
+ }
+}
