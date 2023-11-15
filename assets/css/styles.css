@@ -10,6 +10,9 @@ body{
   line-height: 1.5;
   display:flex;
   width: 100%;
+  /* max-width: 998px; */
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 /*header setup*/
 .header{
@@ -76,9 +79,14 @@ nav a:hover{
   justify-content: center;
   margin-top:150px;
 }
+.tighten-width{
+  margin-left: 15px;
+  margin-right: 15px;
+}
 
 p{
   text-align: center;
+ 
 }
 
 #profile-pic{
@@ -309,6 +317,9 @@ footer{
   body{
    width:100%;
    display: flex;
+   max-width: 810px;
+   margin: 0 auto;
+   overflow-x: hidden;
   }
   
   header{
@@ -358,11 +369,11 @@ footer{
 .resume-container{
   scale:0.75;
   margin-bottom:5px;
-  margin-top: -200px;
+  margin-top: -150px;
 }
 .download-link{
   margin-top: 5px;
-  margin-top:-200px;
+  /* margin-top:-200px; */
 }
 
 }
@@ -371,10 +382,14 @@ footer{
   body{
     width:100%;
     display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    overflow-x: hidden;
    }
    main{
      margin-left:10%;
      width:80%;
+
    }
    .header{
      position: fixed;
@@ -419,7 +434,7 @@ footer{
  .project-tile{
    width:100%;
    height: 250px;
-   
+   margin-left: -20px;
  }
  .title-tile{
    font-size: 20px;
@@ -430,5 +445,6 @@ footer{
  }
  .download-link{
    font-size: 30px;
+   margin-top: -150px;
  }
 }
