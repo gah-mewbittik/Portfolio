@@ -145,7 +145,7 @@ span[data-descr]:hover::after{
   margin-right:25px;
   border-radius: 25px;
   width:20%;
-  height: 300px;
+  height: 350px;
   overflow: hidden;
 }
 /*tile header container*/
