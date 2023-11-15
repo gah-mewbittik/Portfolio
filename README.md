@@ -7,7 +7,7 @@ and this is the first portfolio website that was built from scratch. It was impo
 to structure a website to be responsive.  
 
 The following link is an image of the Website. 
-[Portfolio Visual Demonstration](./assets/images/portfolio-img.png)
+[Portfolio Visual Presentation](./assets/images/portfolio-img.png)
 
 
 ## Installation
@@ -16,7 +16,7 @@ N/A
 
 ## Usage
 
-To use the website, simply click the following link: 
+To use the website, simply click the following link: https://gah-mewbittik.github.io/Portfolio/
 From there you will be able to navigate through the website from the websites' links: ABOUT ME, WORK, CONTACT ME, and RESUME. An additional note, under the WORK section, you can click any of the project tiles to view and experiment with the actual projects. 
 
 ## Credits
