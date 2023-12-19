@@ -6,8 +6,8 @@ The purpose of this project is to created a portfolio to demonstrate my abilitie
 and this is the first portfolio website that was built from scratch. It was important that it was done well. I learnt that it requires a lot of thought
 to structure a website to be responsive.  
 
-The following link is an image of the Website. 
-[Portfolio Visual Presentation](./assets/images/portfolio-img.png)
+The following is an image of my portfolio Website. 
+![Alt text](./assets/images/portfolio-img.png) 
 
 
 ## Installation
