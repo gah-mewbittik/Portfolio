@@ -159,7 +159,7 @@ span[data-descr]:hover::after{
 .img-adj{
   width:100%;
   border-radius: 20px 20px 0 0;
-  height: 50%;
+  height: 60%;
 }
 
 /*project tile text*/
