@@ -106,13 +106,13 @@ span[data-descr]{
   cursor:grab;
 } 
 /*Tooltip hover*/
-span[data-descr]:hover::after{     
+span[data-descr]:hover::after{    
   content: attr(data-descr);
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 40%;
+  /*transform: translateX(-50%);*/
   bottom: 25px;
-  transform: translateX(190%);
+  transform: translateX(170%);
   min-width: 300px;
   border: 3px solid var(--borderCol);
   padding: 12px;
@@ -353,6 +353,7 @@ footer{
   span[data-descr]:hover::after{
     left: 50%;
     transform:translateX(50%);
+    
   }
   p{
     width:100%;
@@ -425,7 +426,7 @@ footer{
    }
    span[data-descr]:hover::after{
      left: 50%;
-     transform:translateX(15%);
+     transform:translateX(5%);
    }
    p{
      width:100%;
